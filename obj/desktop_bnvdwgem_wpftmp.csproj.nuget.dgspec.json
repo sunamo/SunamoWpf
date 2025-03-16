@@ -1,0 +1,211 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\vs\\Projects\\__OnlyWindowsCore_Projects\\sunamo.wpf\\desktop\\desktop.csproj": {}
+  },
+  "projects": {
+    "E:\\vs\\Projects\\__OnlyWindowsCore_Projects\\sunamo.wpf\\desktop\\desktop.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\vs\\Projects\\__OnlyWindowsCore_Projects\\sunamo.wpf\\desktop\\desktop.csproj",
+        "projectName": "desktop",
+        "projectPath": "E:\\vs\\Projects\\__OnlyWindowsCore_Projects\\sunamo.wpf\\desktop\\desktop.csproj",
+        "packagesPath": "C:\\Users\\r\\.nuget\\packages\\",
+        "outputPath": "E:\\vs\\Projects\\__OnlyWindowsCore_Projects\\sunamo.wpf\\desktop\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\r\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0-windows7.0": {
+            "targetAlias": "net9.0-windows",
+            "projectReferences": {
+              "E:\\vs\\Projects\\__OnlyWindowsCore_Projects\\sunamo.wpf\\SunamoDebugging.wpf\\SunamoDebugging.wpf.csproj": {
+                "projectPath": "E:\\vs\\Projects\\__OnlyWindowsCore_Projects\\sunamo.wpf\\SunamoDebugging.wpf\\SunamoDebugging.wpf.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net9.0-windows7.0": {
+          "targetAlias": "net9.0-windows",
+          "dependencies": {
+            "AvalonEdit": {
+              "target": "Package",
+              "version": "[6.3.0.90, )"
+            },
+            "Microsoft.CSharp": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "SunamoData": {
+              "target": "Package",
+              "version": "[24.11.12.1, )"
+            },
+            "SunamoDelegates": {
+              "target": "Package",
+              "version": "[24.11.11.1, )"
+            },
+            "SunamoExceptions": {
+              "target": "Package",
+              "version": "[25.3.9.1, )"
+            },
+            "SunamoI18N": {
+              "target": "Package",
+              "version": "[24.1.7.1, )"
+            },
+            "SunamoShared": {
+              "target": "Package",
+              "version": "[25.1.25.1, )"
+            },
+            "SunamoValues": {
+              "target": "Package",
+              "version": "[25.1.25.1, )"
+            },
+            "SunamoWinStd": {
+              "target": "Package",
+              "version": "[25.2.2.2, )"
+            },
+            "SunamoXlf": {
+              "target": "Package",
+              "version": "[*, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.104/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\vs\\Projects\\__OnlyWindowsCore_Projects\\sunamo.wpf\\SunamoDebugging.wpf\\SunamoDebugging.wpf.csproj": {
+      "version": "23.12.9.2",
+      "restore": {
+        "projectUniqueName": "E:\\vs\\Projects\\__OnlyWindowsCore_Projects\\sunamo.wpf\\SunamoDebugging.wpf\\SunamoDebugging.wpf.csproj",
+        "projectName": "SunamoDebugging.wpf",
+        "projectPath": "E:\\vs\\Projects\\__OnlyWindowsCore_Projects\\sunamo.wpf\\SunamoDebugging.wpf\\SunamoDebugging.wpf.csproj",
+        "packagesPath": "C:\\Users\\r\\.nuget\\packages\\",
+        "outputPath": "E:\\vs\\Projects\\__OnlyWindowsCore_Projects\\sunamo.wpf\\SunamoDebugging.wpf\\obj\\",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\r\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0-windows7.0": {
+            "targetAlias": "net9.0-windows",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net9.0-windows7.0": {
+          "targetAlias": "net9.0-windows",
+          "dependencies": {
+            "Microsoft.CSharp": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "SunamoExceptions": {
+              "target": "Package",
+              "version": "[*, )"
+            },
+            "SunamoShared": {
+              "target": "Package",
+              "version": "[24.1.7.1, )"
+            },
+            "System.Data.DataSetExtensions": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.104/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
