@@ -1,5 +1,7 @@
 namespace SunamoWpf.TemplatesNotCompile;
 
+using SunamoWpf.UserControls;
+
 public partial class MainWindow_Ctor : Window, IEssentialMainWindow, IHideToTray, IConfigurableWindow, IMainWindowBasicControls
 {
     static Type type = typeof(MainWindow_Ctor);
@@ -50,7 +52,7 @@ public partial class MainWindow_Ctor : Window, IEssentialMainWindow, IHideToTray
         if (PH.IsAlreadyRunning(ThisApp.Name))
         {
             SetCancelClosing(false);
-            MessageBox.Show(sess.i18n(XlfKeys.PleaseUseAppInTray));
+            MessageBox.Show(Translate.FromKey(XlfKeys.PleaseUseAppInTray));
             Close();
         }
 #endif

@@ -1,4 +1,3 @@
-
 namespace SunamoWpf._sunamo;
 
 internal class SunamoPoint

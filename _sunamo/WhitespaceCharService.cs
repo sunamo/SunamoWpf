@@ -1,4 +1,4 @@
-namespace SunamoChar.Services;
+namespace SunamoWpf._sunamo;
 
 internal class WhitespaceCharService
 {

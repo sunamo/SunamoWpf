@@ -5,6 +5,11 @@ namespace SunamoWpf;
 /// </summary>
 public partial class PH
 {
+    internal static bool IsAlreadyRunning(string name)
+    {
+        throw new NotImplementedException();
+    }
+
     internal static void Start(string selectedS)
     {
         throw new NotImplementedException();

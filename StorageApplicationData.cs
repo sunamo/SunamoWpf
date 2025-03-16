@@ -1,4 +1,4 @@
-namespace SunamoWpf._sunamo;
+namespace SunamoWpf;
 
 /// <summary>
 /// Tento výčet říká kam se mají ukládat uživatelská data aplikace ve formě řetězců

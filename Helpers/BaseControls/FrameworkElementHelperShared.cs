@@ -77,7 +77,7 @@ public partial class FrameworkElementHelper
 
         var modeType = target.GetType().Assembly.GetTypes().Where(d => d.Name == Translate.FromKey(XlfKeys.Mode)).Single();
         var names = Enum.GetNames(modeType);
-        var names_ctor = Enum.GetNames(typeof(MainWindow_Ctor.Mode));
+        List<string> names_ctor = []; //Enum.GetNames(typeof(MainWindow_Ctor.Mode));
 
         var skipThese = CAG.ToList<string>("MoveToPa", "SearchCodeElements");
 
