@@ -102,3 +102,6 @@ global using SunamoWpf._shared.Helpers;
 global using SunamoWpf.Controls.ToggleSwitch.Borders;
 global using SunamoWpf.Extensions.FileSystemWatcherExtended.nsn;
 global using SunamoWpf._shared.Helpers.Resources;
+global using SunamoDevCode._sunamo.SunamoInterfaces.Interfaces;
+global using SunamoWpf.UserControls;
+global using NullLogger = Microsoft.Extensions.Logging.Abstractions.NullLogger;

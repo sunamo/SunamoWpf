@@ -1,6 +1,6 @@
 namespace SunamoWpf.Interfaces;
 
-public interface IResourceHelperDesktop : IResourceHelper
+public interface IResourceHelperDesktop : IResourceHelperWpf
 {
 
     BitmapImage GetBitmapImageSource(string name);

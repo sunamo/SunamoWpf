@@ -1,7 +1,5 @@
 namespace SunamoWpf.TemplatesNotCompile;
 
-using SunamoWpf.UserControls;
-
 public partial class MainWindow_Ctor : Window, IEssentialMainWindow, IHideToTray, IConfigurableWindow, IMainWindowBasicControls
 {
     static Type type = typeof(MainWindow_Ctor);

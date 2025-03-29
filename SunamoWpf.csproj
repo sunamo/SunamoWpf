@@ -6,8 +6,8 @@
     <UseWindowsForms>False</UseWindowsForms>
     <UseWPF>true</UseWPF>
     <Description>Main package for build WPF apps, even with Windows specific APIs</Description>
-    <Version>25.3.16.1</Version>
-    <PackageReleaseNotes>Init</PackageReleaseNotes>
+    <Version>25.3.29.1</Version>
+    <PackageReleaseNotes>Updated nuget deps</PackageReleaseNotes>
     <Authors>www.sunamo.cz</Authors>
     <Copyright>www.sunamo.cz</Copyright>
     <PackageProjectUrl>https://sunamo.cz/</PackageProjectUrl>

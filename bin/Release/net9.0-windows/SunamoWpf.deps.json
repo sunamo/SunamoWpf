@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v9.0": {
-      "SunamoWpf/25.3.16.1": {
+      "SunamoWpf/25.3.29.1": {
         "dependencies": {
           "AvalonEdit": "6.3.0.90",
           "Microsoft.CSharp": "4.7.0",
@@ -1078,7 +1078,7 @@
     }
   },
   "libraries": {
-    "SunamoWpf/25.3.16.1": {
+    "SunamoWpf/25.3.29.1": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

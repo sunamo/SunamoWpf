@@ -5022,7 +5022,7 @@
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
-    "version": "25.3.16.1",
+    "version": "25.3.29.1",
     "restore": {
       "projectUniqueName": "E:\\vs\\Projects\\WindowsNuGetPackages\\SunamoWpf\\SunamoWpf.csproj",
       "projectName": "SunamoWpf",

@@ -1,6 +1,6 @@
 namespace SunamoWpf.Helpers.Content;
 
-public class ResourcesH : IResourceHelper
+public class ResourcesH : IResourceHelperWpf
 {
     public static ResourcesH ci = new ResourcesH();
 
