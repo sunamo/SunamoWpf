@@ -167,7 +167,7 @@ GetRowsIsChecked(TwoWayTable twt, string folder)
             string fn = FS.GetFileName(item);
             fn = fn.Substring(begin.Length);
             string key = begin + fn;
-            var webPage = SHSplit.SplitMore(fn, "_");
+            var webPage = SHSplit.Split(fn, "_");
             var web = webPage[0];
             var page = webPage[1];
             var dKey = begin + web;
@@ -196,7 +196,7 @@ TF.ReadAllText(item);
             {
             }
 #endif
-            List<string> cells = SHSplit.SplitMore(text, ",");
+            List<string> cells = SHSplit.Split(text, ",");
             List<int> numbers = CAToNumber.ToNumber<int>(BTS.ParseInt, cells, int.MinValue);
             List<bool> bools = CA.ToBool(numbers);
             Dictionary<string, List<bool>> dict = null;

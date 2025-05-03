@@ -95,7 +95,7 @@ public class RegistryHelper //: IRegistry //, IPrevedPpk<RegistryKey, PolozkaReg
         // TODO: Pridat kontrolu, zda tomu tak je
         string pred = null;
         SH.GetPartsByLocation(out pred, out zbylaCesta, cesta, cesta.IndexOf("\\"));
-        var tokeny = SHSplit.SplitMore(zbylaCesta, "\\");
+        var tokeny = SHSplit.Split(zbylaCesta, "\\");
         Type pe = typeof(Registry);
         FieldInfo[] fi = pe.GetFields();
         RegistryKey vratit = null;

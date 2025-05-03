@@ -223,7 +223,7 @@ public class SuMenuItemWithSubitemsHelper
             string categoryPipe = category + "|";
             SuMenuItem tsmi = new SuMenuItem();
             tsmi.Header = category;
-            List<string> stovkyDivided = SHSplit.SplitCharMore(stovky[i].ToString(), '|');
+            List<string> stovkyDivided = SHSplit.SplitChar(stovky[i].ToString(), '|');
             List<String> stovkyActual = new List<String>();
             StringBuilder stovkyActualTemp = new StringBuilder();
             for (int y = 0; y < stovkyDivided.Count; y++)
@@ -247,12 +247,12 @@ public class SuMenuItemWithSubitemsHelper
             foreach (var idcka in stovkyActual)
             {
                 SuMenuItem tsmiStovky = new SuMenuItem();
-                tsmiStovky.Header = (pristePokracovatStovky + 1).ToString() + " - " + (pristePokracovatStovky + SHSplit.SplitMore(idcka, ",").Count).ToString();
+                tsmiStovky.Header = (pristePokracovatStovky + 1).ToString() + " - " + (pristePokracovatStovky + SHSplit.Split(idcka, ",").Count).ToString();
                 List<List<SuMenuItem>> kVlozeniDoDesitky = new List<List<SuMenuItem>>();
                 List<StringBuilder> idckaDesitky = new List<StringBuilder>();
                 kVlozeniDoDesitky.Add(new List<SuMenuItem>());
                 idckaDesitky.Add(new StringBuilder());
-                var jednotkyDivided = SHSplit.SplitMore(idcka, ",");
+                var jednotkyDivided = SHSplit.Split(idcka, ",");
                 int indexNaKteryUkladatDesitky = 0;
                 foreach (var jednotka in jednotkyDivided)
                 {
@@ -285,7 +285,7 @@ public class SuMenuItemWithSubitemsHelper
                 {
                     var u = idckaDesitky[e].ToString();
                     e++;
-                    var desitkyPouze = SHSplit.SplitMore(u, ",");
+                    var desitkyPouze = SHSplit.Split(u, ",");
                     SuMenuItem tsmiDesitky = new SuMenuItem();
                     tsmiDesitky.Header = (pristePokracovatDesitky + 1).ToString() + " - " + (pristePokracovatDesitky + desitkyPouze.Count).ToString();
                     foreach (var item4 in item3)
@@ -302,7 +302,7 @@ public class SuMenuItemWithSubitemsHelper
                     pristePokracovatDesitky += 10;
                 }
                 SuMenuItem tsmiStovky2 = new SuMenuItem();
-                tsmiStovky2.Header = (pristePokracovatStovky + 1).ToString() + " - " + (pristePokracovatStovky + SHSplit.SplitMore(idcka, ",").Count).ToString();
+                tsmiStovky2.Header = (pristePokracovatStovky + 1).ToString() + " - " + (pristePokracovatStovky + SHSplit.Split(idcka, ",").Count).ToString();
                 pristePokracovatStovky += 100;
                 tsmiStovky2.Command = cmd1;
                 //

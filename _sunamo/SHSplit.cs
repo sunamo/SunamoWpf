@@ -1,4 +1,5 @@
 namespace SunamoWpf._sunamo;
+
 internal class SHSplit
 {
     internal static List<string> SplitByWhiteSpaces(string s, bool removeEmpty = false)
@@ -16,7 +17,7 @@ internal class SHSplit
         if (removeEmpty)
         {
             //r = s.Split(AllChars.whiteSpaceChars.ToArray()).ToList();
-            r = SplitCharMore(s, whitespaceChar.whiteSpaceChars.ToArray()).ToList();
+            r = SplitChar(s, whitespaceChar.whiteSpaceChars.ToArray()).ToList();
         }
         else
             //r = s.Split(AllChars.whiteSpaceChars.ToArray(), StringSplitOptions.None).ToList();
@@ -24,18 +25,18 @@ internal class SHSplit
         return r;
     }
 
-    internal static List<string> SplitCharMore(string parametry, params char[] deli)
+    internal static List<string> SplitChar(string parametry, params char[] deli)
     {
-        return SplitMore(StringSplitOptions.RemoveEmptyEntries, parametry,
+        return Split(StringSplitOptions.RemoveEmptyEntries, parametry,
             deli.ToList().ConvertAll(d => d.ToString()).ConvertAll(d => d.ToString()).ToArray());
     }
 
-    internal static List<string> SplitMore(string p, params string[] newLine)
+    internal static List<string> Split(string p, params string[] newLine)
     {
         return p.Split(newLine, StringSplitOptions.RemoveEmptyEntries).ToList();
     }
 
-    internal static List<string> SplitMore(StringSplitOptions stringSplitOptions, string text, params string[] deli)
+    internal static List<string> Split(StringSplitOptions stringSplitOptions, string text, params string[] deli)
     {
         if (deli == null || deli.Count() == 0) throw new Exception("NoDelimiterDetermined");
         //var ie = CA.OneElementCollectionToMulti(deli);

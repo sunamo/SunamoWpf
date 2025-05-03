@@ -90,7 +90,7 @@ public class RegistryEntry //: IUroven
     /// <param name="vstup"></param>
     public string ReturnInLevel(int index, string vstup)
     {
-        var tokeny = SHSplit.SplitMore(vstup, "\\");
+        var tokeny = SHSplit.Split(vstup, "\\");
         return tokeny[index];
     }
     #endregion
