@@ -6,7 +6,7 @@
     <UseWindowsForms>False</UseWindowsForms>
     <UseWPF>true</UseWPF>
     <Description>Main package for build WPF apps, even with Windows specific APIs</Description>
-    <Version>25.5.3.1</Version>
+    <Version>25.5.3.2</Version>
     <PackageReleaseNotes>Mass update</PackageReleaseNotes>
     <Authors>www.sunamo.cz</Authors>
     <Copyright>www.sunamo.cz</Copyright>
