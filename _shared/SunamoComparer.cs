@@ -1,4 +1,4 @@
-namespace SunamoWpf._sunamo;
+namespace SunamoWpf._shared;
 
 internal class SunamoComparer
 {

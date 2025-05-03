@@ -1,8 +1,4 @@
-using SunamoChar.Services;
-using SunamoDevCode._sunamo;
-
 namespace SunamoWpf._sunamo;
-
 internal class SHSplit
 {
     internal static List<string> SplitByWhiteSpaces(string s, bool removeEmpty = false)

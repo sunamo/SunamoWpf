@@ -1,7 +1,3 @@
-using SunamoDevCode._sunamo.SunamoInterfaces.Interfaces;
-
-
-
 namespace SunamoWpf.Helpers.Controls;
 
 public delegate void VoidMouseButtonGeneric1<in T>(MouseButton mb, T t);

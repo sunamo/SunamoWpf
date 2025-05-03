@@ -1,6 +1,6 @@
-namespace SunamoWpf._sunamo;
+namespace SunamoWpf;
 
-public interface IResourceHelper
+public interface IResourceHelperWpf
 {
     string GetString(string name);
     Stream GetStream(string name);

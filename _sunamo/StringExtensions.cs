@@ -1,4 +1,4 @@
-namespace SunamoDevCode._sunamo;
+namespace SunamoWpf._sunamo;
 
 internal static class StringExtensions
 {

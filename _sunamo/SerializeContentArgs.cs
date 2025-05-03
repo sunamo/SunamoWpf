@@ -1,4 +1,4 @@
-﻿namespace SunamoData.Data;
+namespace SunamoWpf._sunamo;
 
 internal class SerializeContentArgs
 {

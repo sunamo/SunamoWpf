@@ -50,7 +50,7 @@ public partial class MainWindow_Ctor : Window, IEssentialMainWindow, IHideToTray
         if (PH.IsAlreadyRunning(ThisApp.Name))
         {
             SetCancelClosing(false);
-            MessageBox.Show(sess.i18n(XlfKeys.PleaseUseAppInTray));
+            MessageBox.Show(Translate.FromKey(XlfKeys.PleaseUseAppInTray));
             Close();
         }
 #endif
