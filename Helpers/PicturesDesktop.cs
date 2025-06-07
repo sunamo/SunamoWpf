@@ -183,7 +183,7 @@ public partial class PicturesDesktop
         }
         return null;
     }
-    public static BitmapSource PlaceToCenterFixedPercentSize(string path, string bi, double targetWidth, double targetHeight, double percentWidthIconOfImage, double percentHeightIconOfImage, PixelColorWpf bgPixelColor, PixelColorWpf fgPixelColor, PixelColorWpf definitelyFgPixelColor)
+    public static BitmapSource PlaceToCenterFixedPercentSize(string path, string bi, double targetWidth, double targetHeight, double percentWidthIconOfImage, double percentHeightIconOfImage, PixelColorWpf bgPixelColor, PixelColorWpf fgPixelColor/*, PixelColorWpf definitelyFgPixelColor*/)
     {
         var wb = bi;
         double width = targetWidth;
@@ -204,7 +204,7 @@ public partial class PicturesDesktop
             {
                 ts16 = true;
                 //vr = PicturesShared.PlaceToCenterExactly(width, height, false, paddingLeftRight, paddingTopBottom, bi, ratioW, ratioH, true);
-                vr = PicturesDesktop.ImageResize(bi, width, height, PicturesSunamo.GetImageFormatsFromExtension(bi), true);
+                vr = PicturesDesktop.ImageResize(bi, width, height, /*PicturesSunamo.GetImageFormatsFromExtension(bi),*/ true);
                 vr = CreateBitmapSource(vr.PixelWidth, vr.PixelHeight, paddingLeftRight, paddingTopBottom, bi, vr, true);
             }
             else if (path.Contains("targetsize"))
@@ -218,7 +218,7 @@ public partial class PicturesDesktop
         }
         else
         {
-            vr = PicturesDesktop.ImageResize(bi, width, height, PicturesSunamo.GetImageFormatsFromExtension(bi), true);
+            vr = PicturesDesktop.ImageResize(bi, width, height, /*PicturesSunamo.GetImageFormatsFromExtension(bi),*/ true);
             vr = CreateBitmapSource(vr.PixelWidth, vr.PixelHeight, 0, 0, bi, vr);
         }
         var wb2 = vr;
@@ -257,7 +257,7 @@ public partial class PicturesDesktop
         double newHeight = height;
         double innerWidth = arg.image.Width;
         double innerHeight = arg.image.Height;
-        var img2 = PicturesDesktop.ImageResize(arg.path, minWidthImage, minHeightImage, 0, 0, PicturesSunamo.GetImageFormatsFromExtension(arg.path), useAtA1PixelSize);
+        var img2 = PicturesDesktop.ImageResize(arg.path, minWidthImage, minHeightImage, /*PicturesSunamo.GetImageFormatsFromExtension(arg.path),*/ useAtA1PixelSize);
         BitmapSource bi = null;
         //bi = img2;
         if (true && img2 != null)
@@ -281,11 +281,11 @@ public partial class PicturesDesktop
     /// <param name="bi"></param>
     /// <param name="trans"></param>
     /// <param name="white2"></param>
-    private static WriteableBitmap MakeWriteableBitmapTransparentFill(BitmapSource bi, PixelColorWpf trans, PixelColorWpf white2)
+    private static WriteableBitmap MakeWriteableBitmapTransparentFill(BitmapSource bi, PixelColorWpf white2)
     {
         white2.Alpha = 255;
         //PixelColor px = white2;
-        trans = new PixelColorWpf() { Alpha = 0, Red = 255, Green = 255, Blue = 255 };
+        var trans = new PixelColorWpf() { Alpha = 0, Red = 255, Green = 255, Blue = 255 };
         WriteableBitmap wb = new WriteableBitmap(bi);
         var pxs = BitmapSourceHelper.GetPixels(bi);
         var first = pxs[0, 0];
@@ -336,11 +336,11 @@ public partial class PicturesDesktop
     /// <param name="bi"></param>
     /// <param name="trans"></param>
     /// <param name="white2"></param>
-    private static WriteableBitmap MakeWriteableBitmapTransparent(BitmapSource bi, PixelColorWpf trans, PixelColorWpf white2)
+    private static WriteableBitmap MakeWriteableBitmapTransparent(BitmapSource bi, PixelColorWpf white2)
     {
         white2.Alpha = 255;
         //PixelColor px = white2;
-        trans = new PixelColorWpf() { Alpha = 0, Red = 255, Green = 255, Blue = 255 };
+        var trans = new PixelColorWpf() { Alpha = 0, Red = 255, Green = 255, Blue = 255 };
         WriteableBitmap wb = new WriteableBitmap(bi);
         var pxs = BitmapSourceHelper.GetPixels(bi);
         var first = pxs[0, 0];
@@ -393,7 +393,7 @@ public partial class PicturesDesktop
     /// <param name="paddingLeftRight"></param>
     /// <param name="paddingTopBottom"></param>
     /// <param name="imgsf"></param>
-    public static BitmapSource ImageResize(string imageSource, double decodePixelWidth, double decodePixelHeight, /*double paddingLeftRight, double paddingTopBottom,*/ ImageFormats imgsf, bool a2IsPixelWidth = false)
+    public static BitmapSource ImageResize(string imageSource, double decodePixelWidth, double decodePixelHeight, /*double paddingLeftRight, double paddingTopBottom,*/  bool a2IsPixelWidth = false)
     {
         double margin = 0;
         #region Zmenšuje načerno

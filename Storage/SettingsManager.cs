@@ -27,7 +27,7 @@ public class SettingsManager : ISettingsManagerWpf<FrameworkElement, DependencyP
     public void LoadSettings(FrameworkElement sender, TUListWpf<FrameworkElement, DependencyProperty> savedElements)
     {
         ////////DebugLogger.Instance.WriteList(savedElements.Select(d => d.Key.GetType().FullName).ToList());
-        EnsureProperties(sender, savedElements);
+        EnsureProperties(savedElements);
         foreach (var element in savedElements)
         {
             try
@@ -84,7 +84,7 @@ public class SettingsManager : ISettingsManagerWpf<FrameworkElement, DependencyP
     }
     public void SaveSettings(FrameworkElement sender, TUListWpf<FrameworkElement, DependencyProperty> savedElements)
     {
-        EnsureProperties(sender, savedElements);
+        EnsureProperties(savedElements);
         foreach (var element in savedElements)
         {
             if (element.Key is Window)

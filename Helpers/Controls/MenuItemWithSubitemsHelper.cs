@@ -210,7 +210,7 @@ public class SuMenuItemWithSubitemsHelper
             i++;
         }
     }
-    public void AddValuesOfArrayAsItems(RoutedCommand cmd0, object[] p, RoutedCommand cmd1, List<StringBuilder> stovky, RoutedCommand cmd2, List<StringBuilder> desitky, RoutedCommand cmd3, List<StringBuilder> jednotky)
+    public void AddValuesOfArrayAsItems(RoutedCommand cmd0, object[] p, RoutedCommand cmd1, List<StringBuilder> stovky, RoutedCommand cmd2, /*List<StringBuilder> desitky,*/ RoutedCommand cmd3 /*, List<StringBuilder> jednotky*/)
     {
         mnoho = true;
         int pristePokracovatDesitky = 0;

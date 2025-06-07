@@ -15,7 +15,7 @@ public static class ComboBoxExtensions
     /// <param name="tb"></param>
     /// <param name="control"></param>
     /// <param name="trim"></param>
-    public static void Validate(this ComboBox control, object tb, ref ValidateDataWpf d)
+    public static void Validate(this ComboBox control, ref ValidateDataWpf d)
     {
         if (!validated)
         {

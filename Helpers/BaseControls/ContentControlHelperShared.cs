@@ -1,6 +1,7 @@
 namespace SunamoWpf.Helpers.BaseControls;
 
-public partial class ContentControlHelper{
+public partial class ContentControlHelper
+{
     public static object Content(CheckBox v)
     {
         var r = WpfApp.cd.Invoke(() => v.Content);
@@ -9,7 +10,7 @@ public partial class ContentControlHelper{
     public static string ExtractContent(object sp)
     {
         var sp2 = (StackPanel)sp;
-        var result = ExtractContent( sp2);
+        var result = ExtractContent(sp2);
         return result;
     }
 
@@ -27,7 +28,7 @@ Je zde ta věc že
             {
                 //if (item is StackPanel)
                 //{
-                    var sp2 = item as TextBlock;
+                var sp2 = item as TextBlock;
                 if (sp2 != null)
                 {
                     if (AwesomeFontControls.IsFamilyFontFontAwesome(sp2.FontFamily))
@@ -36,7 +37,7 @@ Je zde ta věc že
                     }
                     sb.Append(sp2.Text);
                 }
-                
+
                 //}
             }
         }, System.Windows.Threading.DispatcherPriority.ContextIdle);
@@ -87,7 +88,7 @@ Je zde ta věc že
     /// <param name="w"></param>
     /// <param name="h"></param>
     /// <returns></returns>
-private static double AddImg(object img, StackPanel sp, double w, double h)
+    private static double AddImg(object img, StackPanel sp, double w, double h)
     {
         bool isAwesome = false;
         var imgS = img.ToString();
@@ -112,6 +113,7 @@ private static double AddImg(object img, StackPanel sp, double w, double h)
             tb.Padding = new System.Windows.Thickness(10);
 
             sp.Height = h + tb.Padding.Top + tb.Padding.Bottom;
+            sp.Width = w;
 
             AwesomeFontControls.SetAwesomeFontSymbol(tb, imgS);
             sp.Children.Add(tb);
@@ -119,7 +121,7 @@ private static double AddImg(object img, StackPanel sp, double w, double h)
         else
         {
             var img2 = ImageHelperDesktop.Get(img);
-            img2.Margin = new System.Windows.Thickness( 10);
+            img2.Margin = new System.Windows.Thickness(10);
 
             sp.Children.Add(img2);
         }
@@ -131,7 +133,7 @@ private static double AddImg(object img, StackPanel sp, double w, double h)
     private static void AddTextBlock(string text, StackPanel sp, double tbHeight = double.NaN)
     {
         var tb = TextBlockHelper.Get(new ControlInitData { text = text });
-        if (!double.IsNaN( tbHeight ))
+        if (!double.IsNaN(tbHeight))
         {
             tb.FontSize = tbHeight;
         }

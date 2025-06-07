@@ -75,7 +75,7 @@ public partial class SelectFolder : UserControl
     }
     private void SelectOfFolder()
     {
-        string folder = DW.SelectOfFolder(Environment.SpecialFolder.MyComputer);
+        string folder = DW.SelectOfFolder();
         SelectOfFolder(folder);
     }
     private void SelectOfFolder(string folder)

@@ -28,7 +28,7 @@ public partial class ComboBoxHelper
         {
             if (SelectedO == null)
             {
-                if (cb.Items.Count> 0)
+                if (cb.Items.Count > 0)
                 {
                     cb.SelectedIndex = 0;
                     SelectedO = cb.Items[0];
@@ -105,9 +105,9 @@ public partial class ComboBoxHelper
     /// <param name="tb"></param>
     /// <param name="control"></param>
     /// <param name="trim"></param>
-    public static void Validate(object tb, ComboBox control, ref ValidateDataWpf d)
+    public static void Validate(ComboBox control, ref ValidateDataWpf d)
     {
-        control.Validate(tb, ref d);
+        control.Validate(ref d);
     }
     public static bool validated
     {

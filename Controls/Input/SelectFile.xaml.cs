@@ -67,7 +67,7 @@ public partial class SelectFile : UserControl
 
     private void btnSelectFile_Click(object sender, RoutedEventArgs e)
     {
-        string file = DW.SelectOfFile(Environment.SpecialFolder.DesktopDirectory);
+        string file = DW.SelectOfFile();
         if (file != null)
         {
             if (FS.ExistsFile(file))

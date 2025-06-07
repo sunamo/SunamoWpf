@@ -8,9 +8,9 @@ partial class SelectFolder
         get => ValidationHelper.validated;
         set => ValidationHelper.validated = value;
     }
-    public void Validate(object tbFolder, ref ValidateDataWpf d)
+    public void Validate()
     {
-        SelectFolder.Validate(tbFolder, this, ref d);
+        SelectFolder.Validate(this);
     }
 
     /// <summary>
@@ -21,7 +21,7 @@ partial class SelectFolder
     /// <param name="tb"></param>
     /// <param name="control"></param>
     /// <param name="trim"></param>
-    public static void Validate(object tb, SelectFolder control, ref ValidateDataWpf d)
+    public static void Validate(SelectFolder control/*, ref ValidateDataWpf d*/)
     {
         if (!validated)
         {

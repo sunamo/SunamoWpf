@@ -40,7 +40,7 @@ public partial class SelectImageFile : UserControl
     private void btnSelectFile_Click(object sender, RoutedEventArgs e)
     {
         string file = null;
-        file = DW.SelectOfFile(Environment.SpecialFolder.DesktopDirectory);
+        file = DW.SelectOfFile();
         if (file != null)
         {
             if (FS.ExistsFile(file))

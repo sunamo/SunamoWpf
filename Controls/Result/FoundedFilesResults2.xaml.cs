@@ -33,7 +33,7 @@ public partial class FoundedFilesResults2 : UserControl//, IFoundedFilesUC<Found
         Loaded += FoundedFilesResults2_Loaded;
     }
     public event VoidString Selected;
-    public void AddFoundedFile(string item, TUListWpf<string, Brush> p, ref int i)
+    public void AddFoundedFile(string item)
     {
         HideTbNoResultsFound();
         FoundedResultDataWrapper foundedFile = new FoundedResultDataWrapper(item);
@@ -44,13 +44,13 @@ public partial class FoundedFilesResults2 : UserControl//, IFoundedFilesUC<Found
     {
         tbNoResultsFound.Visibility = Visibility.Collapsed;
     }
-    public void AddFoundedFiles(List<string> foundedList, TUListWpf<string, Brush> p)
+    public void AddFoundedFiles(List<string> foundedList)
     {
         HideTbNoResultsFound();
         int i = 0;
         foreach (var item in foundedList)
         {
-            AddFoundedFile(item, p, ref i);
+            AddFoundedFile(item);
         }
     }
     /// <summary>

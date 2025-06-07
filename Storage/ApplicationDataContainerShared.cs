@@ -27,7 +27,7 @@ public partial class ApplicationDataContainer : ApplicationDataConsts
     public ApplicationDataContainer(string file)
     {
         this.file = file;
-        data.Add(file, new ApplicationDataContainerList(file));
+        data.Add(file, new ApplicationDataContainerList(null, file));
     }
 
     /// <summary>

@@ -6,24 +6,23 @@ public partial class StatusHelper
 {
     public static Color GetForegroundBrushOfTypeOfMessage(TypeOfMessageWpf typeOfMessage)
     {
-        return Colors.Black;
-        //switch (st)
-        //{
-        //    case TypeOfMessage.Error:
-        //        return Colors.DarkRed;
-        //    case TypeOfMessage.Warning:
-        //        return Colors.DarkOrange;
-        //    case TypeOfMessage.Information:
-        //        return Colors.Black;
-        //    case TypeOfMessage.Ordinal:
-        //        return Colors.Black;
-        //    case TypeOfMessage.Appeal:
-        //        return Colors.Gray;
-        //    case TypeOfMessage.Success:
-        //        return Colors.LightGreen;
-        //    default:
-        //        return Colors.White;
-        //}
+        switch (typeOfMessage)
+        {
+            case TypeOfMessageWpf.Error:
+                return Colors.DarkRed;
+            case TypeOfMessageWpf.Warning:
+                return Colors.DarkOrange;
+            case TypeOfMessageWpf.Information:
+                return Colors.Black;
+            case TypeOfMessageWpf.Ordinal:
+                return Colors.Black;
+            case TypeOfMessageWpf.Appeal:
+                return Colors.Gray;
+            case TypeOfMessageWpf.Success:
+                return Colors.LightGreen;
+            default:
+                return Colors.White;
+        }
     }
 
 }

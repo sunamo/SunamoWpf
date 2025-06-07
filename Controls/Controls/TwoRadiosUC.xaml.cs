@@ -17,11 +17,7 @@ public partial class TwoRadiosUC
             TwoRadiosUC.validated = value;
         }
     }
-    public bool Validate(object tbFolder, ref ValidateDataWpf d)
-    {
-        Validate(tbFolder, this, ref d);
-        return validated;
-    }
+
     public object GetBool()
     {
         if (rb1.IsCheckedSimple())
@@ -30,7 +26,7 @@ public partial class TwoRadiosUC
         }
         return false;
     }
-    public bool Validate(object tb, TwoRadiosUC control, ref ValidateDataWpf d)
+    public bool Validate(ref ValidateDataWpf d)
     {
         if (d == null)
         {

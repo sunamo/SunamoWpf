@@ -2,20 +2,20 @@ namespace SunamoWpf.Helpers;
 
 public class KeyboardHelper
 {
-    /// <summary>
-    /// Not working in Release and NotifyIcon it's not the fault
-    /// USE ONLY FOR ALT+F3 AND SO. 
-    /// When I check for Alt+f3 and 
-    /// Keyboard.Modifiers has always only first pressed key, cannot combine
-    /// When I want handle keys without modifier, must use KeyWithNoneModifier
-    /// </summary>
-    /// <param name="e"></param>
-    /// <param name="key"></param>
-    /// <param name="modifier"></param>
-    public static bool KeyWithModifier(Key key, ModifierKeys modifier)
-    {
-        return KeyWithModifier(null, key, modifier);
-    }
+    ///// <summary>
+    ///// Not working in Release and NotifyIcon it's not the fault
+    ///// USE ONLY FOR ALT+F3 AND SO. 
+    ///// When I check for Alt+f3 and 
+    ///// Keyboard.Modifiers has always only first pressed key, cannot combine
+    ///// When I want handle keys without modifier, must use KeyWithNoneModifier
+    ///// </summary>
+    ///// <param name="e"></param>
+    ///// <param name="key"></param>
+    ///// <param name="modifier"></param>
+    //public static bool KeyWithModifier(Key key, ModifierKeys modifier)
+    //{
+    //    return KeyWithModifier(null, key, modifier);
+    //}
     #region nonWhiteSpace
     static List<string> nonWhiteSpace = SHGetLines.GetLines(@"A
 B

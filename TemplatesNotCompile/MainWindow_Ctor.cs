@@ -320,10 +320,7 @@ public partial class MainWindow_Ctor : Window, IEssentialMainWindow, IHideToTray
         #endregion
         grid.Children.Add(actual);
         Grid.SetRow(actual, 1);
-        MainWindow_SizeChanged(null, null);
-    }
-    private void MainWindow_SizeChanged(object p1, object p2)
-    {
+
     }
     public bool GetCancelClosing()
     {

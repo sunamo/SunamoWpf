@@ -7,7 +7,7 @@ public partial class WindowHelper
     /// Pokud bude false, vrátí se výška i šířka 2x delší než jaká ve skutečnosti je(resp. vrátí se správná - 720x1136 ale na obrazovku se zvládne vykreslit jen 360x568)
     /// </summary>
     /// <param name="noScaleFactor"></param>
-    public static Size WindowSize(bool noScaleFactor)
+    public static Size WindowSize()
     {
         ThrowEx.NotImplementedMethod();
         return Size.Empty;
@@ -20,8 +20,8 @@ public partial class WindowHelper
             var dr = w.ShowDialog();
             if (w.DialogResult != dr)
             {
-            // Cant set DialogResult while window isnt show as dialog
-            //DialogResult = dialogResult;
+                // Cant set DialogResult while window isnt show as dialog
+                //DialogResult = dialogResult;
             }
 
             return dr;
@@ -32,7 +32,7 @@ public partial class WindowHelper
         }
     }
 
-    
+
 
     public static void ShowDialog(WindowWithUserControl windowWithUserControl)
     {
@@ -58,7 +58,7 @@ public partial class WindowHelper
             }
         }
         catch (Exception ex)
-        {   
+        {
         }
     }
 }

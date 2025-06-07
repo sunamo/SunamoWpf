@@ -15,7 +15,7 @@ public static class ListBoxExtensions
     /// <param name="tb"></param>
     /// <param name="control"></param>
     /// <param name="trim"></param>
-    public static void Validate(this ListBox control, object tb, ref ValidateDataWpf d)
+    public static void Validate(this ListBox control, ref ValidateDataWpf d)
     {
         if (!validated)
         {

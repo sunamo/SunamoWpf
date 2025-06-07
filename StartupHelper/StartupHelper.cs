@@ -87,7 +87,7 @@ public class StartupHelper
     /// <param name="app"></param>
     public static void Ctor(Dispatcher dispatcher, Application app)
     {
-        ftl = new FileTextLogger(bp + @"StartupLogRelease.txt", 1);
+        ftl = new FileTextLogger(bp + @"StartupLogRelease.txt");
         PD.WriteToStartupLogRelease = ftl.WriteNewLine;
 
         PD.WriteToStartupLogRelease("Ctor_Start");

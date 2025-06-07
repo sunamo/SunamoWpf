@@ -5,7 +5,7 @@ public class ProgressBarHelper
     ProgressBar pb = null;
     PercentCalculator percentCalculator;
     UIElement ui = null;
-    public ProgressBarHelper CreateInstance(object pb, double overall, object dispatcherObject)
+    public ProgressBarHelper CreateInstance(object pb, double overall)
     {
         return new ProgressBarHelper(pb, overall, ui);
     }

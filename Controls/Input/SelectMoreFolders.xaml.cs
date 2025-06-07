@@ -131,18 +131,18 @@ public partial class SelectMoreFolders : UserControl
         }
     }
 
-    public static void Validate(object tb, SelectMoreFolders control, ref ValidateDataWpf d)
+    public static void Validate(SelectMoreFolders control)
     {
         var controls = ControlFinder.StackPanel(control, "spFolders").Children;
         foreach (SelectFolder item in controls)
         {
-            item.Validate(tb, ref d);
+            item.Validate();
         }
     }
 
-    public void Validate(object tbFolder, ref ValidateDataWpf d)
+    public void Validate()
     {
-        Validate(tbFolder, this, ref d);
+        Validate(this);
     }
 
     private void btnSaveChangesToTemplate_Click(object sender, RoutedEventArgs e)

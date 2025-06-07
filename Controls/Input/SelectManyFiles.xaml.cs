@@ -5,7 +5,7 @@ public partial class SelectManyFiles : UserControl
 {
     public static Type type = typeof(SelectManyFiles);
 
-    public void Validate(object tb, ref ValidateDataWpf d)
+    public void Validate(ref ValidateDataWpf d)
     {
         if (d == null)
         {
@@ -13,7 +13,7 @@ public partial class SelectManyFiles : UserControl
         }
         foreach (SelectFile item in ControlFinder.StackPanel(this, "spFiles").Children)
         {
-            item.Validate(tb, ref d);
+            item.Validate(ref d);
         }
     }
 

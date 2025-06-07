@@ -5,7 +5,7 @@ using OpenFileDialog = Microsoft.Win32.OpenFileDialog;
 
 internal class DW
 {
-    internal static string SelectOfFile(Environment.SpecialFolder SunamoWpfDirectory)
+    internal static string SelectOfFile()
     {
         OpenFileDialog openFileDialog = new OpenFileDialog();
         openFileDialog.Filter = "Textové soubory (*.txt)|*.txt|Všechny soubory (*.*)|*.*";
@@ -15,7 +15,7 @@ internal class DW
         }
         return null;
     }
-    internal static string SelectOfFolder(Environment.SpecialFolder myComputer)
+    internal static string SelectOfFolder()
     {
         FolderBrowserDialog dialog = new FolderBrowserDialog();
 

@@ -37,38 +37,38 @@ public static partial class UIElementExtensions
         //else if (t == TypesControls.tListBox)
         //{
         //    var c = ui as ListBox;
-        //    c.Validate(name, d);
+        //    c.Validate(/*name,*/ d);
         //    return ListBoxHelper.validated;
         //}
         // ListViewHelper doesnt exists
         //else if (t == TypesControls.tListView)
         //{
         //    var c = ui as ListView;
-        //    c.Validate(name, d);
+        //    c.Validate(/*name,*/ d);
         //    return ListViewHelper.validated;
         //}
         else if (t == TypesControls.tComboBox)
         {
             var c = ui as ComboBox;
-            c.Validate(name, ref d);
+            c.Validate(/*name,*/ ref d);
             return ComboBoxHelper.validated;
         }
         else if (t == SelectFile.type)
         {
             var c = ui as SelectFile;
-            c.Validate(name, ref d);
+            c.Validate(/*name,*/ ref d);
             return SelectFile.validated;
         }
         else if (t == SelectManyFiles.type)
         {
             var c = ui as SelectManyFiles;
-            c.Validate(name, ref d);
+            c.Validate(ref d);
             return SelectManyFiles.validated;
         }
         else if (t == TwoRadiosUC.type)
         {
             var c = ui as TwoRadiosUC;
-            c.Validate(name, ref d);
+            c.Validate(/*name,*/ ref d);
             return TwoRadiosUC.validated;
         }
         else if (t == TypesControlsSunamo.tPathEditor)
