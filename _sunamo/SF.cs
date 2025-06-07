@@ -96,11 +96,11 @@ internal static class SF
     /// </summary>
     /// <param name="file"></param>
     /// <returns></returns>
-    internal static List<List<string>> GetAllElementsFile(string file)
-    {
-        string firstLine = null;
-        return GetAllElementsFile(file, ref firstLine);
-    }
+    //internal static List<List<string>> GetAllElementsFile(string file)
+    //{
+    //    string firstLine = null;
+    //    return GetAllElementsFile(file, ref firstLine);
+    //}
     internal static List<string> RemoveComments(List<string> tf)
     {
         //CA.RemoveStringsEmpty2(tf);
@@ -118,10 +118,17 @@ internal static class SF
         tf = tf.Where(d => !d.StartsWith("#")).ToList();
         return tf;
     }
-    internal static List<List<string>> GetAllElementsFile(string file, ref string firstCommentLine,
+    internal static List<List<string>> GetAllElementsFile(string file/*, ref string firstCommentLine*/,
         string oddelovaciZnak = "|")
     {
+
+
         var (header, rows) = GetAllElementsFileAdvanced(file, oddelovaciZnak);
+
+
+
+        //firstCommentLine = rows.FirstOrDefault(d => d.)
+
         if (header.Count > 0) rows.Insert(0, header);
         return rows;
     }
@@ -249,6 +256,9 @@ internal static class SF
     {
         lines = RemoveComments(lines);
         var vr = new List<List<string>>();
+
+        firstLIne = lines[0];
+
         foreach (var var in lines)
             if (!string.IsNullOrWhiteSpace(var))
                 vr.Add(GetAllElementsLine(var));
@@ -294,11 +304,11 @@ internal static class SF
     ///     Read text with first delimitech which automatically delimite
     /// </summary>
     /// <param name="fileNameOrPath"></param>
-    internal static void ReadFileOfSettingsOther(string fileNameOrPath)
+    internal static void ReadFileOfSettingsOther(string fileNameOrPath, Func<string, string> appDataCiReadFileOfSettingsOther)
     {
         // COmmented, app data not should be in *.web. pass directly as arg
         List<string> lines = null;
-        //SHGetLines.GetLines(AppData.ci.ReadFileOfSettingsOther(fileNameOrPath));
+        lines = SHGetLines.GetLines(appDataCiReadFileOfSettingsOther(fileNameOrPath));
         if (lines.Count > 1)
         {
             int delimiterInt;

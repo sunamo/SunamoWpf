@@ -15,35 +15,35 @@ public class FoundedFilesD<SearchInUC> //: IFoundedFilesUCCombine<SearchInUC>
     public event VoidString Selected;
 
 
-    public void AddFoundedFile(string item, TUListWpf<string, Brush> p, ref int i)
-    {
+    //public void AddFoundedFile(string item, TUListWpf<string, Brush> p, ref int i)
+    //{
 
-    }
+    //}
 
-    public void AddFoundedFiles(List<string> foundedList, TUListWpf<string, Brush> p)
-    {
+    //public void AddFoundedFiles(List<string> foundedList, TUListWpf<string, Brush> p)
+    //{
 
-    }
+    //}
 
-    public void AddFoundedResults(bool clear, TUListWpf<string, Brush> p, List<TWithNameTWpf<string>> foundedResult)
-    {
+    //public void AddFoundedResults(bool clear, TUListWpf<string, Brush> p, List<TWithNameTWpf<string>> foundedResult)
+    //{
 
-    }
+    //}
 
     public void ClearFoundedResult()
     {
 
     }
 
-    public TUListWpf<string, Brush> DefaultBrushes(string green = "", string red = "")
+    public TUListWpf<string, Brush> DefaultBrushes(/*string green = "", string red = ""*/)
     {
         return new TUListWpf<string, Brush>();
     }
 
-    public bool? Filter(string text)
-    {
-        return false;
-    }
+    //public bool? Filter(string text)
+    //{
+    //    return false;
+    //}
 
     public void FoundedFile_Selected(string s)
     {
@@ -53,33 +53,35 @@ public class FoundedFilesD<SearchInUC> //: IFoundedFilesUCCombine<SearchInUC>
         }
     }
 
-    public IFoundedFileUC GetFoundedFileByPath(string path)
-    {
-        return null;
-    }
 
-    public void Init(params string[] basePath)
-    {
-
-    }
 
     public void InitializeComponent()
     {
 
     }
 
-    public void OnSelected(string p)
-    {
+    //public void OnSelected(string p)
+    //{
 
-    }
+    //}
 
-    public string PathOfFirstFile()
-    {
-        return null;
-    }
+    //public string PathOfFirstFile()
+    //{
+    //    return null;
+    //}
 
-    public void SelectFile(string file)
-    {
+    //public void SelectFile(string file)
+    //{
 
-    }
+    //}
+
+    //public IFoundedFileUC GetFoundedFileByPath(string path)
+    //{
+    //    return null;
+    //}
+
+    //public void Init(params string[] basePath)
+    //{
+
+    //}
 }

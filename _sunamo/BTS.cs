@@ -298,7 +298,11 @@ internal class BTS
             vr = "Yes";
         else
             vr = "No";
-        return vr.ToLower();
+        if (lower)
+        {
+            return vr.ToLower();
+        }
+        return vr;
     }
     internal static object GetMinValueForType(Type idt)
     {
@@ -544,15 +548,7 @@ internal class BTS
         if (p) return Ano;
         return Ne;
     }
-    internal static string BoolToString(bool p, bool lower = false)
-    {
-        string vr = null;
-        if (p)
-            vr = Yes;
-        else
-            vr = No;
-        return vr.ToLower();
-    }
+
     #endregion
     #region byte[] <> string
     internal static List<byte> ConvertFromUtf8ToBytes(string vstup)
@@ -730,14 +726,14 @@ internal class BTS
     }
     #endregion
     #region GetNumberedList*
-    /// <param name="p"></param>
+    /// <param name="from"></param>
     /// <param name="max"></param>
     /// <param name="postfix"></param>
-    internal static string[] GetNumberedListFromTo(int p, int max)
+    internal static string[] GetNumberedListFromTo(int from, int max)
     {
         max++;
         var vr = new List<string>();
-        for (var i = 0; i < max; i++) vr.Add(i.ToString());
+        for (var i = from; i < max; i++) vr.Add(i.ToString());
         return vr.ToArray();
     }
     internal static List<string> GetNumberedListFromTo(int p, int max, string postfix = ". ")

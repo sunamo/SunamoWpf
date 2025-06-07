@@ -87,7 +87,7 @@ public partial class ColorH
 #if DEBUG
     public static void DebugWrite(Color c)
     {
-        //DebugLoggerApps.Instance.Write("A: " + c.A + " R: " + c.R + " G: " + c.G + " : " + c.B);
+        Debug.WriteLine("A: " + c.A + " R: " + c.R + " G: " + c.G + " : " + c.B);
     }
 #endif
     #endregion

@@ -93,7 +93,7 @@ public partial class SelectFile : UserControl
 
 
     public static Type type = typeof(SelectFile);
-    public void Validate(object tbNewPath, ref ValidateDataWpf d)
+    public void Validate(/*object tbNewPath,*/ ref ValidateDataWpf d)
     {
         if (d == null)
         {

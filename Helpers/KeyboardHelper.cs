@@ -242,7 +242,7 @@ DeadCharProcessed");
     /// <param name="e"></param>
     /// <param name="key"></param>
     /// <param name="modifier"></param>
-    public static bool KeyWithModifier(KeyEventArgs e, Key key, ModifierKeys modifier)
+    public static bool KeyWithModifier(/*KeyEventArgs e,*/ Key key, ModifierKeys modifier)
     {
         #region With KeysCatcher
         //var key2 = EnumHelper.Parse<System.Windows.Forms.Keys>(key.ToString(), System.Windows.Forms.Keys.None);

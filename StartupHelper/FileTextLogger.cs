@@ -13,7 +13,7 @@ public class FileTextLogger
     /// Buffer 1MB
     /// </summary>
     /// <param name="fn"></param>
-    public FileTextLogger(string fn, int bufferInMb)
+    public FileTextLogger(string fn)
     {
         this.fn = fn;
         FS.CreateUpfoldersPsysicallyUnlessThere(fn);

@@ -96,9 +96,9 @@ public class InlineBuilder : InlineBuilderBase, IInlineBuilder
     /// Tato Metoda nefunguje, protože Paragraph je odvozený od Block a ne od Inline 
     /// </summary>
     /// <param name = "italic"></param>
-    public void AddParagraph(Inline italic)
-    {
-    }
+    //public void AddParagraph(Inline italic)
+    //{
+    //}
     public void LineBreak()
     {
         inlines.Add(new LineBreak());

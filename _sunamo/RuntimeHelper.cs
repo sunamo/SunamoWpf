@@ -98,12 +98,15 @@ internal class RuntimeHelper
     internal static void EmptyDummyMethod()
     {
     }
+
+#pragma warning disable
     internal static void EmptyDummyMethod(string s, params string[] o)
     {
     }
     internal static void EmptyDummyMethodLogMessage(TypeOfMessageWpf t, string s, params string[] o)
     {
     }
+#pragma warning restore
 
     internal static bool IsAdminUser()
     {

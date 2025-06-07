@@ -24,10 +24,10 @@ public class HotKey : IDisposable
 
     public object Tag = null;
 
-    public static void DummyMethod(HotKey h)
-    {
+    //public static void DummyMethod(HotKey h)
+    //{
 
-    }
+    //}
 
     // ******************************************************************
     public HotKey(Key k, KeyModifier keyModifiers, Action<HotKey> action, bool register = true)

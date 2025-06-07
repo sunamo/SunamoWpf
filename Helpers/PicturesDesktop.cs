@@ -204,21 +204,21 @@ public partial class PicturesDesktop
             {
                 ts16 = true;
                 //vr = PicturesShared.PlaceToCenterExactly(width, height, false, paddingLeftRight, paddingTopBottom, bi, ratioW, ratioH, true);
-                vr = PicturesDesktop.ImageResize(bi, width, height, 0, 0, PicturesSunamo.GetImageFormatsFromExtension(bi), true);
+                vr = PicturesDesktop.ImageResize(bi, width, height, PicturesSunamo.GetImageFormatsFromExtension(bi), true);
                 vr = CreateBitmapSource(vr.PixelWidth, vr.PixelHeight, paddingLeftRight, paddingTopBottom, bi, vr, true);
             }
             else if (path.Contains("targetsize"))
             {
-                vr = PicturesDesktop.PlaceToCenterExactly(width, height, false, paddingLeftRight, paddingTopBottom, bi, ratioW, ratioH, false);
+                vr = PicturesDesktop.PlaceToCenterExactly(width, height, /*false,*/ paddingLeftRight, paddingTopBottom, bi, /*ratioW, ratioH,*/ false);
             }
             else
             {
-                vr = PicturesDesktop.PlaceToCenterExactly(width, height, false, paddingLeftRight, paddingTopBottom, bi, ratioW, ratioH, false);
+                vr = PicturesDesktop.PlaceToCenterExactly(width, height, /*false,*/ paddingLeftRight, paddingTopBottom, bi, /*ratioW, ratioH,*/ false);
             }
         }
         else
         {
-            vr = PicturesDesktop.ImageResize(bi, width, height, 0, 0, PicturesSunamo.GetImageFormatsFromExtension(bi), true);
+            vr = PicturesDesktop.ImageResize(bi, width, height, PicturesSunamo.GetImageFormatsFromExtension(bi), true);
             vr = CreateBitmapSource(vr.PixelWidth, vr.PixelHeight, 0, 0, bi, vr);
         }
         var wb2 = vr;
@@ -242,8 +242,9 @@ public partial class PicturesDesktop
     /// <param name="minimalWidthPadding"></param>
     /// <param name="minimalHeightPadding"></param>
     /// <param name="args"></param>
-    public static BitmapSource PlaceToCenterExactly(double width, double height, bool writeToConsole, double minimalWidthPadding, double minimalHeightPadding, string arg2, double ratioW, double ratioH, bool useAtA1PixelSize = false)
+    public static BitmapSource PlaceToCenterExactly(double width, double height, /*bool writeToConsole,*/ double minimalWidthPadding, double minimalHeightPadding, string arg2, /*double ratioW, double ratioH*/ bool useAtA1PixelSize = false)
     {
+        double ratioW; double ratioH;
         BitmapImage bi2 = new BitmapImage(new Uri(arg2));
         ratioW = bi2.PixelWidth / bi2.Width;
         ratioH = bi2.PixelHeight / bi2.Height;
@@ -392,7 +393,7 @@ public partial class PicturesDesktop
     /// <param name="paddingLeftRight"></param>
     /// <param name="paddingTopBottom"></param>
     /// <param name="imgsf"></param>
-    public static BitmapSource ImageResize(string imageSource, double decodePixelWidth, double decodePixelHeight, double paddingLeftRight, double paddingTopBottom, ImageFormats imgsf, bool a2IsPixelWidth = false)
+    public static BitmapSource ImageResize(string imageSource, double decodePixelWidth, double decodePixelHeight, /*double paddingLeftRight, double paddingTopBottom,*/ ImageFormats imgsf, bool a2IsPixelWidth = false)
     {
         double margin = 0;
         #region Zmenšuje načerno

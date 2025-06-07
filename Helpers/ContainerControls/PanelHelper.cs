@@ -20,13 +20,13 @@ public partial class PanelHelper
     /// <param name="p"></param>
     public static object ContentOfFirstChild(Panel p)
     {
-        //var first = p.Children.FirstOrNull();
-        //if (first == null)
-        //{
-        //    return null;
-        //}
-        //var c = VisualTreeHelpers.FindDescendents<ContentControl>(p);
-        return null;
+        var first = p.Children;
+        if (first == null)
+        {
+            return null;
+        }
+        var c = VisualTreeHelpers.FindDescendents<ContentControl>(p);
+        return c;
     }
 
     private static IList Childrens(UIElement maybePanel)
@@ -87,5 +87,5 @@ public partial class PanelHelper
         return vr;
     }
 
-   
+
 }

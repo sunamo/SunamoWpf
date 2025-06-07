@@ -80,11 +80,11 @@ public partial class ApplicationDataContainer : ApplicationDataConsts
         apcSearchTextBox.Add(chbl);
     }
 
-    public void Add(TwoWayTable twt)
-    {
-        //twt.c = list;
-        //twt.Save += Twt_Save;
-    }
+    //public void Add(TwoWayTable twt)
+    //{
+    //    //twt.c = list;
+    //    //twt.Save += Twt_Save;
+    //}
 
     public void Add(ComboBox cb)
     {
@@ -198,7 +198,9 @@ public partial class ApplicationDataContainer : ApplicationDataConsts
         list2.Add(text);
         return list2;
     }
+#pragma warning disable
     private void Cb_DataContextChanged(object sender, DependencyPropertyChangedEventArgs e)
+#pragma warning restore
     {
         //SaveControl(sender);
     }
@@ -209,7 +211,7 @@ public partial class ApplicationDataContainer : ApplicationDataConsts
     }
     public ApplicationDataContainerList AddFrameworkElement(FrameworkElement fw)
     {
-        ApplicationDataContainerList result = new ApplicationDataContainerList(fw);
+        ApplicationDataContainerList result = new ApplicationDataContainerList(fw, "");
         return AddFrameworkElement(fw, result);
     }
 

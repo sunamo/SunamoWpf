@@ -89,7 +89,7 @@ public partial class ComboBoxHelper
     /// </summary>
     /// <param name="eh"></param>
     /// <param name="o"></param>
-    public void AddValuesOfArrayAsItems(Func<object, string> toMakeNameInTWithName, RoutedEventHandler eh, params object[] o)
+    public void AddValuesOfArrayAsItems(Func<object, string> toMakeNameInTWithName, /*RoutedEventHandler eh,*/ params object[] o)
     {
         var enu = CAG.ToList<object>(o);
         // cant add here because A1 will try cast added string to Encoding and throw exception
@@ -116,10 +116,7 @@ public partial class ComboBoxHelper
         }
     }
 
-    public void AddValuesOfIntAsItems(RoutedEventHandler eh, int initialValue, int resizeOf, int degrees)
-    {
-        AddValuesOfIntAsItems(initialValue, resizeOf, degrees);
-    }
+
 
     /// <summary>
     /// A1 was handler of MouseDown, now without using. Use second method without A1.

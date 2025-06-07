@@ -5,9 +5,9 @@ internal partial class ThrowEx
     internal static Action<object> showExceptionWindow;
     internal static bool reallyThrow2;
 
-    internal static bool IsNotTheSame<T>(string before, string name1, T value1, string name2, T value2)
+    internal static bool IsNotTheSame<T>(string name1, T value1, string name2, T value2)
     {
-        return ThrowIsNotNull(Exceptions.IsNotTheSame(FullNameOfExecutedCode(), name1, value2, name2, value2));
+        return ThrowIsNotNull(Exceptions.IsNotTheSame(FullNameOfExecutedCode(), name1, value1, name2, value2));
     }
 
     internal static bool FolderDoesNotExists(string folder, string additionalInfo = "")

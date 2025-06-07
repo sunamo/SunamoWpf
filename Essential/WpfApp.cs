@@ -54,7 +54,7 @@ public partial class WpfApp
 #if DEBUG
     public static void WriteDebug(string v)
     {
-        //////DebugLogger.DebugWriteLine(v);
+        Debug.WriteLine(v);
     }
 #endif
     /// <summary>

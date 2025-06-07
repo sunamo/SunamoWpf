@@ -5,7 +5,7 @@ public partial class SelectManyFiles : UserControl
 {
     public static Type type = typeof(SelectManyFiles);
 
-    public void Validate(object tb, SelectManyFiles control, ref ValidateDataWpf d)
+    public void Validate(object tb, ref ValidateDataWpf d)
     {
         if (d == null)
         {
@@ -15,11 +15,6 @@ public partial class SelectManyFiles : UserControl
         {
             item.Validate(tb, ref d);
         }
-    }
-
-    public void Validate(object tbFile, ref ValidateDataWpf d)
-    {
-        Validate(tbFile, this, ref d);
     }
 
     public static bool validated

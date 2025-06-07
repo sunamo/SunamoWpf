@@ -11,7 +11,7 @@ public class XamlSerializer
     /// </summary>
     /// <param name="nameWindow"></param>
     /// <param name="w"></param>
-    public XamlSerializer(Window w, string path)
+    public XamlSerializer(Window w)
     {
         var name = w.GetType().Name;
         //ThrowEx.NameIsNotSetted(Exc.GetStackTrace(),type, "ctor", nameWindow, w.Name);

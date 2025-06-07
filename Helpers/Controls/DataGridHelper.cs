@@ -157,7 +157,7 @@ public static class DataGridHelper
         return vr;
     }
 
-    public static void AddRows(DataGrid dtGrid, List<object> list, List<IList> o, params string[] columns)
+    public static void AddRows(DataGrid dtGrid, /*List<object> list,*/ List<IList> o, params string[] columns)
     {
         foreach (var item in columns)
         {

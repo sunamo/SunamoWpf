@@ -42,7 +42,7 @@ public class SettingsManager : ISettingsManagerWpf<FrameworkElement, DependencyP
                     object value = null;
                     try
                     {
-                        value = def[GetElementFullPath(element.Key, sender)];
+                        value = def[GetElementFullPath(element.Key)];
                     }
                     catch (SettingsPropertyNotFoundException)
                     {
@@ -64,11 +64,11 @@ public class SettingsManager : ISettingsManagerWpf<FrameworkElement, DependencyP
     /// </summary>
     /// <param name="fw"></param>
     /// <param name="sender"></param>
-    private string GetElementFullPath(FrameworkElement fw, FrameworkElement sender)
+    private string GetElementFullPath(FrameworkElement fw/*, FrameworkElement sender*/)
     {
         if (false)
         {
-            return sender.Name + "." + fw.GetType().FullName;
+            //return sender.Name + "." + fw.GetType().FullName;
         }
         StringBuilder sb = new StringBuilder();
         sb.Append(fw.Name);
@@ -99,7 +99,7 @@ public class SettingsManager : ISettingsManagerWpf<FrameworkElement, DependencyP
                 value = element.Key.GetValue(element.Value);
                 try
                 {
-                    var elementName = GetElementFullPath(element.Key, sender);
+                    var elementName = GetElementFullPath(element.Key);
                     def[elementName] = value;
                 }
                 catch (SettingsPropertyNotFoundException)
@@ -118,7 +118,7 @@ public class SettingsManager : ISettingsManagerWpf<FrameworkElement, DependencyP
     /// </summary>
     /// <param name="sender"></param>
     /// <param name="savedElements"></param>
-    public void EnsureProperties(FrameworkElement sender, TUListWpf<FrameworkElement, DependencyProperty> savedElements)
+    public void EnsureProperties(/*FrameworkElement sender,*/ TUListWpf<FrameworkElement, DependencyProperty> savedElements)
     {
         foreach (var item in customProperties)
         {
@@ -127,7 +127,7 @@ public class SettingsManager : ISettingsManagerWpf<FrameworkElement, DependencyP
         foreach (var element in savedElements)
         {
             var defValue = element.Value.DefaultMetadata.DefaultValue;
-            var propertyName = GetElementFullPath(element.Key, sender);
+            var propertyName = GetElementFullPath(element.Key);
             EnsureProperty(defValue, propertyName);
         }
         def.Reload();

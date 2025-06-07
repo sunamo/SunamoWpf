@@ -59,29 +59,29 @@ public partial class FoundedFilesResults2 : UserControl//, IFoundedFilesUC<Found
     /// <param name="clear"></param>
     /// <param name="p"></param>
     /// <param name="foundedResult"></param>
-    public void AddFoundedResults(bool clear, TUListWpf<string, Brush> p, List<TWithNameTWpf<string>> foundedResult)
-    {
-        ThrowEx.NotImplementedMethod();
-        //int i = 1;
-        //if (clear)
-        //{
-        //    ClearFoundedResult();
-        //}
-        //if (foundedResult.Count > 0)
-        //{
-        //    HideTbNoResultsFound();
-        //    lv.Visibility = Visibility.Visible;
-        //}
-        //foreach (var item in foundedResult)
-        //{
-        //    d.Add(new FoundedResultDataWrapper(item.))
-        //    //FoundedResultUC fr = new FoundedResultUC(item.name, p, i++);
-        //    //fr.Selected += OnSelected;
-        //    //TextBlock tb = TextBlockHelper.Get(new ControlInitData { text = item.t });
-        //    //fr.SecondRow = tb;
-        //    //sp.Children.Add(fr);
-        //}
-    }
+    //public void AddFoundedResults(bool clear, TUListWpf<string, Brush> p, List<TWithNameTWpf<string>> foundedResult)
+    //{
+    //    ThrowEx.NotImplementedMethod();
+    //    //int i = 1;
+    //    //if (clear)
+    //    //{
+    //    //    ClearFoundedResult();
+    //    //}
+    //    //if (foundedResult.Count > 0)
+    //    //{
+    //    //    HideTbNoResultsFound();
+    //    //    lv.Visibility = Visibility.Visible;
+    //    //}
+    //    //foreach (var item in foundedResult)
+    //    //{
+    //    //    d.Add(new FoundedResultDataWrapper(item.))
+    //    //    //FoundedResultUC fr = new FoundedResultUC(item.name, p, i++);
+    //    //    //fr.Selected += OnSelected;
+    //    //    //TextBlock tb = TextBlockHelper.Get(new ControlInitData { text = item.t });
+    //    //    //fr.SecondRow = tb;
+    //    //    //sp.Children.Add(fr);
+    //    //}
+    //}
     public void AttachSelected(VoidString act)
     {
         Selected += act;

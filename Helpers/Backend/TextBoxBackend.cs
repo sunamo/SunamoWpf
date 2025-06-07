@@ -125,7 +125,7 @@ do SearchCodeElementsUCData.founded vkládám ve value.Count 2, ale zde mi to ji
             int serie = actualSearchedResult + 1;
             SetTbSearchedResult(serie, actualFileSearchOccurencesCount);
             FoundedCodeElementWpf a = actualFileSearchOccurences[actualSearchedResult];
-            ScrollToLineMethod(a.Line, addRowsDuringScrolling);
+            ScrollToLineMethod(a.Line/*, addRowsDuringScrolling*/);
             actualSearchedResult++;
         }
     }
@@ -134,7 +134,7 @@ do SearchCodeElementsUCData.founded vkládám ve value.Count 2, ale zde mi to ji
     /// </summary>
     /// <param name="line"></param>
     /// <param name="addLines"></param>
-    public void ScrollToLineMethod(int line, int addLines)
+    public void ScrollToLineMethod(int line)
     {
         #region 1) CodeTextBox
         //if (txtContent.LineCount > addLines && line > addLines)
@@ -168,11 +168,11 @@ do SearchCodeElementsUCData.founded vkládám ve value.Count 2, ale zde mi to ji
         int countLines = SH.CountLines(txtContent.Text);
         if (newLine > countLines)
         {
-            ScrollToLineMethod(countLines, addRowsDuringScrolling);
+            ScrollToLineMethod(countLines);
         }
         else
         {
-            ScrollToLineMethod(newLine, addRowsDuringScrolling);
+            ScrollToLineMethod(newLine);
         }
     }
     /// <summary>

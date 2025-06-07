@@ -26,10 +26,10 @@ public partial class ApplicationDataContainerList : System.Collections.IEnumerab
     /// </summary>
     Dictionary<string, ABWpf> data = new Dictionary<string, ABWpf>();
     /// <param name="path"></param>
-    public ApplicationDataContainerList(string path)
-    {
-        Init(path);
-    }
+    //public ApplicationDataContainerList(string path)
+    //{
+    //    Init(path);
+    //}
     /// <summary>
     /// path = AppData.ci.GetFile(AppFolders.Controls, fw.Name)
     /// </summary>
@@ -41,9 +41,7 @@ public partial class ApplicationDataContainerList : System.Collections.IEnumerab
         Init(path);
     }
 
-    public ApplicationDataContainerList(FrameworkElement fw)
-    {
-    }
+
 
     /// <summary>
     /// Parse text file in format key|fullname|value

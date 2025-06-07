@@ -14,7 +14,7 @@ public class ListViewColumnHelper<T> where T : IIdentificatorDesktop<int>
         this.lstViewXamlColumns = lstViewXamlColumns;
     }
     //public event Action<int, int> MultiCheck;
-    public void CheckBox_Click(object sender, RoutedEventArgs e, Checkboxes chb2)
+    public void CheckBox_Click(object sender, /*RoutedEventArgs e, */Checkboxes chb2)
     {
         if (Keyboard.IsKeyDown(Key.LeftShift) || Keyboard.IsKeyDown(Key.RightShift))
         {

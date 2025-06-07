@@ -39,50 +39,49 @@ public class ColorHelperDesktop
     #region Mono
     public static WriteableBitmap SwapColor(BitmapSource bi, PixelColorWpf bgPixelColor, PixelColorWpf fgPixelColorFg, PixelColorWpf definitelyFgPixelColor)
     {
-        return null;
 
-        //        PixelColor balckZero = DrawingColorHelper.PixelColorFromDrawingColor(Color.Black, 0);
-        //        WriteableBitmap wb = new WriteableBitmap(bi);
-        //        var pxs = BitmapSourceHelper.GetPixels(bi);
-        //        var first = pxs[0, 0];
-        //        for (int i = 0; i < pxs.GetLength(0); i++)
-        //        {
-        //            for (int y = 0; y < pxs.GetLength(1); y++)
-        //            {
+        var balckZero = DrawingColorHelper.PixelColorFromDrawingColor(System.Drawing.Color.Black, 0);
+        WriteableBitmap wb = new WriteableBitmap(bi);
+        var pxs = BitmapSourceHelper.GetPixels(bi);
+        var first = pxs[0, 0];
+        for (int i = 0; i < pxs.GetLength(0); i++)
+        {
+            for (int y = 0; y < pxs.GetLength(1); y++)
+            {
 
-        //                var pxsi = pxs[i, y];
-        //#if DEBUG
-        //                //////////DebugLogger.Instance.Write(pxsi.Alpha + "-" + pxsi.Red + "-" + pxsi.Green + "-" + pxsi.Blue);
-        //#endif
+                var pxsi = pxs[i, y];
+#if DEBUG
+                //////////DebugLogger.Instance.Write(pxsi.Alpha + "-" + pxsi.Red + "-" + pxsi.Green + "-" + pxsi.Blue);
+#endif
 
-        //                bool b = shared.ColorHelper.IsColorSame(bgPixelColor, pxsi) || shared.ColorHelper.IsColorSame(balckZero, pxsi);
-        //                bool b1 = shared.ColorHelper.IsColorSame(definitelyFgPixelColor, pxsi);
-        //                bool b2 = shared.ColorHelper.IsColorSame(fgPixelColorFg, pxsi);
-        //                if (!b)
-        //                {
-        //                    if (b1 || b2)
-        //                    {
+                bool b = ColorHelper.IsColorSame(bgPixelColor, pxsi) || ColorHelper.IsColorSame(balckZero, pxsi);
+                bool b1 = ColorHelper.IsColorSame(definitelyFgPixelColor, pxsi);
+                bool b2 = ColorHelper.IsColorSame(fgPixelColorFg, pxsi);
+                if (!b)
+                {
+                    if (b1 || b2)
+                    {
 
 
-        //                        if (b2)
-        //                        {
-        //                            pxs[i, y] = definitelyFgPixelColor;
-        //                        }
-        //                        else
-        //                        {
-        //                            pxs[i, y] = fgPixelColorFg;
-        //                        }
-        //                    }
-        //                }
+                        if (b2)
+                        {
+                            pxs[i, y] = definitelyFgPixelColor;
+                        }
+                        else
+                        {
+                            pxs[i, y] = fgPixelColorFg;
+                        }
+                    }
+                }
 
-        //            }
-        //        }
+            }
+        }
 
-        //        BitmapSourceHelper.PutPixels(wb, pxs, 0, 0);
-        //        return wb;
+        BitmapSourceHelper.PutPixels(wb, pxs, 0, 0);
+        return wb;
     }
 
-    public static WriteableBitmap ReplaceAlpha(BitmapSource bi, PixelColorWpf bgPixelColor)
+    public static WriteableBitmap ReplaceAlpha(BitmapSource bi/*, PixelColorWpf bgPixelColor*/)
     {
         PixelColorWpf balckZero = DrawingColorHelper.PixelColorFromDrawingColor(System.Drawing.Color.Black, 0);
         WriteableBitmap wb = new WriteableBitmap(bi);

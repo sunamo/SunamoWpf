@@ -388,10 +388,10 @@ btnForgetPassword_ClickAsync(object sender, RoutedEventArgs e)
         // For sure set loginClicked for default value
         loginClicked = false;
     }
-    public void Accept(object input)
-    {
-        ThrowEx.NotImplementedMethod();
-    }
+    //public void Accept(object input)
+    //{
+    //    ThrowEx.NotImplementedMethod();
+    //}
     public void FocusOnMainElement()
     {
         // Nemůžu tu nastavovat, FocusOnMainElement se volá automaticky, tím pádem se nastaví žluté obtažení ale nefunguje kurzor. Když kliknu do txtPassword mají zvýraznění oba 2

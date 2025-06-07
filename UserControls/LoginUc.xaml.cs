@@ -84,7 +84,7 @@ public partial class LoginUc : UserControl//, IControlWithResult, IKeysHandler
         // Cant be, window must be already showned as dialog
         //DialogResult = true;
     }
-    public bool HandleKey(KeyEventArgs e)
+    public bool HandleKey(/*KeyEventArgs e*/)
     {
         return false;
     }
