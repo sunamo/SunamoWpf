@@ -44,7 +44,7 @@ Je zde ta věc že
         return sb.ToString();
     }
 
-    public static StackPanel GetContent(ControlInitData d)
+    public static async Task<StackPanel> GetContent(ControlInitData d)
     {
         var img = d.imagePath;
         var text = d.text;
@@ -63,12 +63,12 @@ Je zde ta věc že
         sp.Height = d.imageHeight + d.addPadding;
         if (isImg && isText)
         {
-            var tbHeight = AddImg(img, sp, d.imageWidth, d.imageHeight);
+            var tbHeight = await AddImg(img, sp, d.imageWidth, d.imageHeight);
             AddTextBlock(text, sp, tbHeight);
         }
         else if (isImg)
         {
-            AddImg(img, sp, d.imageWidth, d.imageHeight);
+            AddImg(img, sp, d.imageWidth, d.imageHeight).RunSynchronously();
         }
         else if (isText)
         {
@@ -88,7 +88,7 @@ Je zde ta věc že
     /// <param name="w"></param>
     /// <param name="h"></param>
     /// <returns></returns>
-    private static double AddImg(object img, StackPanel sp, double w, double h)
+    private static async Task<double> AddImg(object img, StackPanel sp, double w, double h)
     {
         bool isAwesome = false;
         var imgS = img.ToString();
@@ -115,7 +115,7 @@ Je zde ta věc že
             sp.Height = h + tb.Padding.Top + tb.Padding.Bottom;
             sp.Width = w;
 
-            AwesomeFontControls.SetAwesomeFontSymbol(tb, imgS);
+            await AwesomeFontControls.SetAwesomeFontSymbol(tb, imgS);
             sp.Children.Add(tb);
         }
         else

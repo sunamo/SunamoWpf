@@ -49,7 +49,7 @@ public partial class SelectManyFiles : UserControl
 
     private void SelectMoreFiles_Loaded(object sender, RoutedEventArgs e)
     {
-        SetAwesomeIcons();
+        SetAwesomeIcons().RunSynchronously();
 
         AddFile(string.Empty);
     }

@@ -150,7 +150,7 @@ internal static class SF
     internal static void WriteAllElementsToFile<Key, Value>(string coolPeopleShortcuts, Dictionary<Key, Value> d2)
     {
         var list = ListFromDictionary(d2);
-        WriteAllElementsToFile(coolPeopleShortcuts, list);
+        WriteAllElementsToFile(coolPeopleShortcuts, list).RunSynchronously();
     }
     internal static async Task WriteAllElementsToFile(string VybranySouborLogu, List<List<string>> p)
     {

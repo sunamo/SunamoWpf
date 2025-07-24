@@ -1,7 +1,66 @@
-namespace SunamoWpf._sunamo;
+﻿namespace SunamoWpf._sunamo;
 
 internal class SH
 {
+    private static bool IsInFirstXCharsTheseLetters(string p, int pl, params char[] letters)
+    {
+        for (var i = 0; i < pl; i++)
+            foreach (var item in letters)
+                if (p[i] == item)
+                    return true;
+        return false;
+    }
+
+    private static string ShortForLettersCount(string p, int p_2, out bool pridatTriTecky)
+    {
+        pridatTriTecky = false;
+        // Vše tu funguje výborně
+        p = p.Trim();
+        var pl = p.Length;
+        var jeDelsiA1 = p_2 <= pl;
+
+
+        if (jeDelsiA1)
+        {
+            if (IsInFirstXCharsTheseLetters(p, p_2, ' '))
+            {
+                var dexMezery = 0;
+                var d = p; //p.Substring(p.Length - zkratitO);
+                var to = d.Length;
+
+                var napocitano = 0;
+                for (var i = 0; i < to; i++)
+                {
+                    napocitano++;
+
+                    if (d[i] == ' ')
+                    {
+                        if (napocitano >= p_2) break;
+
+                        dexMezery = i;
+                    }
+                }
+
+                d = d.Substring(0, dexMezery + 1);
+                if (d.Trim() != "") pridatTriTecky = true;
+                //d = d ;
+                return d;
+                //}
+            }
+
+            pridatTriTecky = true;
+            return p.Substring(0, p_2);
+        }
+
+        return p;
+    }
+
+    internal static string ShortForLettersCount(string p, int p_2)
+    {
+        var pridatTriTecky = false;
+        return ShortForLettersCount(p, p_2, out pridatTriTecky);
+    }
+
     internal static bool Contains(string fileFullPath, string key)
     {
         return fileFullPath.Contains(key);

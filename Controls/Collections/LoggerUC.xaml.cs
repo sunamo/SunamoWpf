@@ -46,7 +46,7 @@ public partial class LoggerUC : UserControl, ISaveWithoutArgWpf
     {
         //fileToSave = AppData.ci.GetFile(AppFolders.Logs, this.Name + AllExtensions.txt);
         this.fileToSave = fileToSave;
-        TF.WriteAllLines(fileToSave, Lines());
+        TF.WriteAllLines(fileToSave, Lines()).RunSynchronously();
     }
 }
 #endregion

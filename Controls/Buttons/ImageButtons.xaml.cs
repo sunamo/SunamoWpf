@@ -10,6 +10,7 @@ public partial class ImageButtons : UserControl
     public event Action ClearAll;
     public event Action SelectAll;
     public event Action UnselectAll;
+
     async Task SetAwesomeIcons()
     {
         // In serie how is written in xaml
@@ -19,6 +20,39 @@ public partial class ImageButtons : UserControl
         await AwesomeFontControls.SetAwesomeFontSymbol(btnSelectAll, "\uf05d");
         await AwesomeFontControls.SetAwesomeFontSymbol(btnUnselectAll, "\uf10c");
     }
+
+    /// <summary>
+    /// Private constructor - use CreateAsync instead
+    /// A1 can be Action or bool(Visibility).
+    /// </summary>
+    /// <param name="copyToClipboard"></param>
+    /// <param name="clear"></param>
+    private ImageButtons()
+    {
+        try
+        {
+            InitializeComponent();
+        }
+        catch (Exception ex)
+        {
+#if DEBUG
+            Debugger.Break();
+#endif
+        }
+        Loaded += ImageButtons_Loaded;
+    }
+
+    /// <summary>
+    /// Factory method for creating ImageButtons with async initialization
+    /// </summary>
+    /// <returns>Fully initialized ImageButtons instance</returns>
+    public static async Task<ImageButtons> CreateAsync()
+    {
+        var imageButtons = new ImageButtons();
+        await imageButtons.SetAwesomeIcons();
+        return imageButtons;
+    }
+
     private void BtnClear_Click(object sender, RoutedEventArgs e)
     {
         ClearAll();
@@ -44,26 +78,6 @@ public partial class ImageButtons : UserControl
             data = eov.enterOneValueUC.txtEnteredText.Text;
             Handler(btnAdd, null);
         }
-    }
-    /// <summary>
-    /// A1 can be Action or bool(Visibility).
-    /// </summary>
-    /// <param name="copyToClipboard"></param>
-    /// <param name="clear"></param>
-    public ImageButtons()
-    {
-        try
-        {
-            InitializeComponent();
-        }
-        catch (Exception ex)
-        {
-#if DEBUG
-            Debugger.Break();
-#endif
-        }
-        SetAwesomeIcons();
-        Loaded += ImageButtons_Loaded;
     }
     private void ImageButtons_Loaded(object sender, RoutedEventArgs e)
     {

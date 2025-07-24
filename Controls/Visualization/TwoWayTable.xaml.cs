@@ -58,7 +58,7 @@ public partial class TwoWayTable : UserControl
         //Set(sender, checkBoxes, content);
         //SaveControl(sender);
         // better is save simpli and no use adc
-        TF.WriteAllText(path, content);
+        TF.WriteAllText(path, content).RunSynchronously();
     }
     private static int NewMethod(bool item)
     {

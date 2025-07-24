@@ -5,7 +5,7 @@
   },
   "projects": {
     "E:\\vs\\Projects\\WindowsNuGetPackages\\SunamoWpf\\SunamoWpf.csproj": {
-      "version": "25.6.7.1",
+      "version": "25.7.24.1",
       "restore": {
         "projectUniqueName": "E:\\vs\\Projects\\WindowsNuGetPackages\\SunamoWpf\\SunamoWpf.csproj",
         "projectName": "SunamoWpf",
@@ -45,7 +45,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net9.0-windows7.0": {
@@ -103,7 +103,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

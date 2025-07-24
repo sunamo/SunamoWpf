@@ -27,7 +27,7 @@ public partial class ApplicationDataContainer : ApplicationDataConsts
     public ApplicationDataContainer(string file)
     {
         this.file = file;
-        data.Add(file, new ApplicationDataContainerList(null, file));
+        data.Add(file, ApplicationDataContainerList.Init(null, file).Result);
     }
 
     /// <summary>
@@ -55,7 +55,7 @@ public partial class ApplicationDataContainer : ApplicationDataConsts
         FrameworkElement fw = (FrameworkElement)o;
         if (fw != null)
         {
-            data[fw].SaveFile();
+            data[fw].SaveFile().RunSynchronously();
         }
         else
         {
@@ -211,7 +211,7 @@ public partial class ApplicationDataContainer : ApplicationDataConsts
     }
     public ApplicationDataContainerList AddFrameworkElement(FrameworkElement fw)
     {
-        ApplicationDataContainerList result = new ApplicationDataContainerList(fw, "");
+        ApplicationDataContainerList result = ApplicationDataContainerList.Init(fw, "").Result;
         return AddFrameworkElement(fw, result);
     }
 

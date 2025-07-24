@@ -1,8 +1,27 @@
 namespace SunamoWpf._sunamo;
+
 using PathMs = System.IO.Path;
 
 internal class FS
 {
+    protected static readonly List<char> invalidFileNameChars = Path.GetInvalidFileNameChars().ToList();
+
+    internal static string ReplaceIncorrectCharactersFile(string p)
+    {
+        var t = p;
+        foreach (var item in invalidFileNameChars)
+        {
+            var sb = new StringBuilder();
+            foreach (var item2 in t)
+                if (item != item2)
+                    sb.Append(item2);
+                else
+                    sb.Append("");
+            t = sb.ToString();
+        }
+        return t;
+    }
+
     internal static void CreateUpfoldersPsysicallyUnlessThere(string nad)
     {
         CreateFoldersPsysicallyUnlessThere(Path.GetDirectoryName(nad));
@@ -76,7 +95,7 @@ nad
     internal static string GetSizeInAutoString(double value, ComputerSizeUnitsWpf b)
     {
         if (b != ComputerSizeUnitsWpf.B)
-            // Získám hodnotu v bytech
+            // Zï¿½skï¿½m hodnotu v bytech
             value = ConvertToSmallerComputerUnitSize(value, b, ComputerSizeUnitsWpf.B);
         if (value < 1024) return value + " B";
         var previous = value;

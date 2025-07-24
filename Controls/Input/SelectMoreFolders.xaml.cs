@@ -29,7 +29,7 @@ public partial class SelectMoreFolders : UserControl
 
     private void SelectMoreFolders_Loaded(object sender, RoutedEventArgs e)
     {
-        SetAwesomeIcons();
+        SetAwesomeIcons().RunSynchronously();
 
         AddFolder(string.Empty);
     }

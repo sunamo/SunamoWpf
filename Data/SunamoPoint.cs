@@ -1,21 +1,21 @@
-namespace SunamoWpf._sunamo;
+namespace SunamoWpf.Data;
 
-internal class SunamoPoint
+public class SunamoPoint
 {
-    internal SunamoPoint()
+    public SunamoPoint()
     {
     }
 
-    internal SunamoPoint(double x, double y)
+    public SunamoPoint(double x, double y)
     {
         X = x;
         Y = y;
     }
 
-    internal double X { get; set; }
-    internal double Y { get; set; }
+    public double X { get; set; }
+    public double Y { get; set; }
 
-    internal void Parse(string input)
+    public void Parse(string input)
     {
         var d = input.Split(',');
         //ParserTwoValues.ParseDouble(",", SHParts.RemoveAfterFirstFunc(input, char.IsLetter, new char[] { ',' }));
@@ -30,7 +30,7 @@ internal class SunamoPoint
         return X + "," + Y;
     }
 
-    internal object ToSystemWindows()
+    public object ToSystemWindows()
     {
         throw new NotImplementedException();
     }

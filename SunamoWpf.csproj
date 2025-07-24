@@ -6,8 +6,8 @@
     <UseWindowsForms>False</UseWindowsForms>
     <UseWPF>true</UseWPF>
     <Description>Main package for build WPF apps, even with Windows specific APIs</Description>
-    <Version>25.6.7.1</Version>
-    <PackageReleaseNotes>Remove unused parameters from methods </PackageReleaseNotes>
+    <Version>25.7.24.1</Version>
+    <PackageReleaseNotes>feat: Added extensions methods and more</PackageReleaseNotes>
     <Authors>www.sunamo.cz</Authors>
     <Copyright>www.sunamo.cz</Copyright>
     <PackageProjectUrl>https://sunamo.cz/</PackageProjectUrl>
@@ -29,6 +29,9 @@
     <PackageReference Include="ObjectDumper.NET" Version="4.3.2" />
     <PackageReference Include="System.Management" Version="9.0.3" />
     <PackageReference Include="TextCopy" Version="6.2.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="NewFolder\" />
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>$(DefineConstants);$(DefineConstants)TRACE;ASYNC;SunamoWpf;SunamoWpf.csproj</DefineConstants>

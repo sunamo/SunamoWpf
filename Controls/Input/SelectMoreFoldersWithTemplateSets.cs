@@ -69,7 +69,7 @@ public class SelectMoreFoldersWithTemplateSets
                     List<string> pass = new List<string>(txtFolders.SelectedFolders());
                     pass.Add(text);
                     var line = SF.PrepareToSerializationExplicit2(pass);
-                    SF.AppendAllText(pathFromCtor, line);
+                    SF.AppendAllText(pathFromCtor, line).RunSynchronously();
                     cbSetsFolders.Items.Add(text);
                 }
             }

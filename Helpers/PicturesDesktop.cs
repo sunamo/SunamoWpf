@@ -183,6 +183,7 @@ public partial class PicturesDesktop
         }
         return null;
     }
+
     public static BitmapSource PlaceToCenterFixedPercentSize(string path, string bi, double targetWidth, double targetHeight, double percentWidthIconOfImage, double percentHeightIconOfImage, PixelColorWpf bgPixelColor, PixelColorWpf fgPixelColor/*, PixelColorWpf definitelyFgPixelColor*/)
     {
         var wb = bi;

@@ -1,4 +1,4 @@
-﻿namespace SunamoWpf._sunamo;
+namespace SunamoWpf._sunamo;
 
 internal class RandomHelper
 {
@@ -16,6 +16,14 @@ internal class RandomHelper
         return (byte)s_rnd.Next(od, toInclude + 1);
     }
 
+    internal static T RandomEnum<T>()
+    {
+        Array values = Enum.GetValues(typeof(T));
+        Random random = new Random();
+        T randomEnum = (T)values.GetValue(random.Next(values.Length));
+        return randomEnum;
+    }
+
     private static float RandomFloatBetween0And1()
     {
         return RandomFloat(1, 0);
@@ -26,7 +34,7 @@ internal class RandomHelper
 
 
         Random random = new Random();
-        double rozsah = maxP- p;
+        double rozsah = maxP - p;
         double nahodneDouble = random.NextDouble() * rozsah + p;
         return (float)nahodneDouble;
     }

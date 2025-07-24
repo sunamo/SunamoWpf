@@ -105,3 +105,5 @@ global using SunamoWpf._shared.Helpers.Resources;
 global using SunamoDevCode._sunamo.SunamoInterfaces.Interfaces;
 global using SunamoWpf.UserControls;
 global using NullLogger = Microsoft.Extensions.Logging.Abstractions.NullLogger;
+global using SunamoWpf.Extensions.Color;
+global using SunamoWpf.Extensions.SIze;

@@ -35,10 +35,9 @@ public partial class ApplicationDataContainerList : System.Collections.IEnumerab
     /// </summary>
     /// <param name="fw"></param>
     /// <param name="path"></param>
-    public ApplicationDataContainerList(FrameworkElement fw, string path)
+    private ApplicationDataContainerList(FrameworkElement fw)
     {
         ThrowEx.IsWhitespaceOrNull("fw.Name", fw.Name);
-        Init(path);
     }
 
 
@@ -49,13 +48,14 @@ public partial class ApplicationDataContainerList : System.Collections.IEnumerab
     /// <param name="path"></param>
     public
 #if ASYNC
-    async Task
+    static async Task<ApplicationDataContainerList>
 #else
     void
 #endif
- Init(string path)
+ Init(FrameworkElement fw, string path)
     {
-        this.path = path;
+        ApplicationDataContainerList o = new ApplicationDataContainerList(fw);
+        o.path = path;
         string content =
 #if ASYNC
     await
@@ -201,9 +201,11 @@ public partial class ApplicationDataContainerList : System.Collections.IEnumerab
             if (value != null)
             {
                 ABWpf get = ABWpf.Get(fullName, value);
-                data.Add(key, get);
+                o.data.Add(key, get);
             }
         }
+
+        return o;
     }
     public Dictionary<string, ABWpf> GetItems()
     {
@@ -248,15 +250,15 @@ public partial class ApplicationDataContainerList : System.Collections.IEnumerab
         CA.RemoveStringsEmpty(result);
         return result;
     }
-    public void Nuke()
+    public async Task Nuke()
     {
         data.Clear();
-        SaveFile();
+        await SaveFile();
     }
-    public void DeleteEntry(string key)
+    public async Task DeleteEntry(string key)
     {
         data.Remove(key);
-        SaveFile();
+        await SaveFile();
     }
     public object this[string key]
     {
@@ -289,7 +291,7 @@ public partial class ApplicationDataContainerList : System.Collections.IEnumerab
                         throwExcIfFalse = false;
                     }
                     //TF.throwExcIfCantBeWrite = throwExcIfFalse;
-                    SaveFile();
+                    SaveFile().RunSynchronously();
                 }
                 else
                 {
